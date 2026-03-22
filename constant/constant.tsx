@@ -1,3 +1,27 @@
+export const pageLink = [
+  { href: "/", label: "Home" },
+  {
+    href: "/contact",
+    label: "Contact",
+  },
+  {
+    href: "/work",
+    label: "Work",
+  },
+  {
+    href: "/privacypolicy",
+    label: "Pirvacy Policy",
+  },
+];
+
+export const socials = [
+  {
+    href: "/",
+    label: "Linkedin",
+  },
+  { href: "/", label: "Github" },
+];
+
 export const homeBannerLines = ["Development", "UI Systems", "Web Apps"];
 
 export const companyLogos = [
@@ -74,5 +98,31 @@ export const workSectionData = [
     name: "mojito",
     date: "2026",
     desc: "Web design",
+  },
+];
+
+export const testimonial = [
+  {
+    client: "Team Kochhar’s Media Planners",
+    review:
+      "aman is more than just a developer he actually thinks like a strategist.",
+  },
+  {
+    client: "Aashi Designz",
+    review: "working with aman changed how we look at digital products.",
+  },
+  {
+    client: "Stegas",
+    review: "aman brought our vision to life even better than we expected.",
+  },
+  {
+    client: "Dems",
+    review:
+      "what impressed us most was his attention to detail and technical clarity.",
+  },
+  {
+    client: "Avvari Reality",
+    review:
+      " the website feels fast, modern, and extremely well built. you can clearly see the thought and expertise behind every part.",
   },
 ];

@@ -24,6 +24,21 @@ body {
   .marqueeScroll {
     animation: scrollAnimate 30s linear infinite;
   }
+  .activeBoxShadow {
+    box-shadow:
+      rgba(0, 0, 0, 0.16) 0px 3px 6px,
+      rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  .boxShadow {
+    box-shadow:
+      rgba(0, 0, 0, 0.16) 0px 3px 6px,
+      rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  .buttonHover:hover {
+  
+    transition: transform ease-in-out 0.3s;
+    transform: translate(0, -5px);
+  }
 }
 /* *********** */
 /* navbar */

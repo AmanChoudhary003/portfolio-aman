@@ -2,7 +2,7 @@ import { homeServiceSection } from "@/constant/constant";
 
 export default function Service() {
   return (
-    <div className="p-10">
+    <div className=" p-5 sm:p-15 ">
       <h2 className="highlightFont text-white text-6xl md:text-9xl font-bold my-2">
         SERVICES
         <span className="  text-(--highlightColor)">.</span>

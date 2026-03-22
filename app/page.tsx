@@ -1,46 +1,32 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState, useRef } from "react";
+import LoopingText from "@/component/loopingtext";
 import LogoSlider from "../component/logoslider";
-import { homeBannerLines } from "@/constant/constant";
 import About from "@/component/about";
 import Service from "@/component/service";
+import Banner from "@/component/banner";
 import Work from "@/component/work";
 import ClientReview from "@/component/clientreview";
 
+import { gsap, useGSAP, SplitText } from "@/lib/gsapConfig";
+
 export default function Home() {
-  const [textStyle, setTextStyle] = useState<number>(0);
-
-  //for looping of text in hero section
-
-  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
-  useEffect(() => {
-    startLoop();
-
-    return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
-    };
-  }, []);
-
-  const startLoop = () => {
-    intervalRef.current = setInterval(() => {
-      setTextStyle((prev) => (prev + 1) % homeBannerLines.length);
-    }, 2000);
-  };
-
-  const stopLoop = () => {
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-    }
-  };
+  useGSAP(() => {
+    const headline = SplitText.create(".heroSectionPara", { type: "words" });
+    const name = SplitText.create(".name", { type: "words" });
+    gsap.from([headline.words, name.words], {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      stagger: 0.04,
+      ease: "power1.inOut",
+    });
+  });
 
   return (
     <div>
-      <div className="w-full h-screen p-10 flex flex-wrap items-end relative rounded-4xl">
+      <div className="w-full h-screen  p-5 sm:p-15  flex flex-wrap items-end relative rounded-4xl">
         <Image
           src={`/images/32908346_278261219198.jpg`}
           fill
@@ -50,8 +36,8 @@ export default function Home() {
           className="-z-10 rounded-b-4xl"
         />
         <div className="w-full py-5 flex justify-between items-center   flex-wrap  ">
-          <div className="h-full">
-            <p className="text-xl">
+          <div className="sm:w-[45%] h-full">
+            <p className=" heroSectionPara text-xl">
               <span className="text-white">
                 {" "}
                 Turning complex ideas into high-performing <br /> digital
@@ -60,41 +46,14 @@ export default function Home() {
               that feel seamless and look exceptional.
             </p>
           </div>
-          <div className="hidden md:block">
-            <ul>
-              {homeBannerLines.map((line, index) => {
-                return (
-                  <li
-                    onMouseEnter={() => {
-                      setTextStyle(index);
-                      stopLoop();
-                    }}
-                    onMouseLeave={() => {
-                      startLoop();
-                    }}
-                    key={index}
-                    className={`h-8  md:h-13 text-3xl  md:text-5xl  m-2  group overflow-hidden transition-tranform
-                  ${textStyle == index ? "text-white" : ""}
-                  `}
-                  >
-                    <p className=" transition-all duration-300 group-hover:-translate-y-13">
-                      {line}
-                    </p>
-                    <p className="transition-all  duration-300 group-hover:-translate-y-13">
-                      {line}
-                    </p>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+          <LoopingText />
         </div>
-        <h1 className="highlightFont text-white text-6xl md:text-8xl font-bold">
+        <h1 className="name highlightFont text-white text-6xl md:text-8xl font-bold">
           AMAN <br /> CHOUDHARY
           <span className=" text-(--highlightColor)">.</span>
         </h1>
       </div>
-      <div className="p-10">
+      <div className="p-15">
         <p className="text-white/60">Brand That Believe in my work</p>
         <LogoSlider />
       </div>
@@ -103,6 +62,7 @@ export default function Home() {
       <Service />
       {/* <Work /> */}
       <ClientReview />
+      <Banner />
     </div>
   );
 }

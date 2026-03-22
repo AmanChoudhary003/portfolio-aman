@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="p-10">
+    <div className=" p-5 sm:p-15 ">
       <h2 className="highlightFont text-white text-3xl md:text-5xl font-bold my-2">
         ABOUT
         <span className="  text-(--highlightColor)">.</span>

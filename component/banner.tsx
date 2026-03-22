@@ -1,6 +1,46 @@
-export default function Banner() {
-  return <div>
+import Image from "next/image";
 
-    
-  </div>;
+import { gsap, useGSAP } from "@/lib/gsapConfig";
+import LogoSlider from "./logoslider";
+
+export default function Banner() {
+  useGSAP(() => {
+    gsap.to("#bannerBackgroundImg", {
+      scale: 1.5,
+      ease: "none",
+      scrollTrigger: {
+        trigger: "#banner",
+        start: "top bottom",
+        end: "bottom bottom",
+        scrub: true,
+      },
+    });
+  });
+
+  return (
+    <div
+      id="banner"
+      className=" w-full h-100 sm:min-h-screen p-5 sm:p-15 relative flex items-center justify-center  rounded-4xl overflow-hidden"
+    >
+      <Image
+        src={`/images/bannerbackground.png`}
+        fill
+        sizes="100vw"
+        className="-z-10"
+        id="bannerBackgroundImg"
+        alt="bannerBackgroundimg"
+      />
+
+      <h2 className="highlightFont text-4xl sm:text-6xl md:text-8xl text-center font-bold text-white">
+        Let’s Create <br />{" "}
+        <span className="ml-30 sm:ml-50">
+          Something <br /> Amazing{" "}
+          <span className="text-(--highlightColor)">.</span>
+        </span>
+      </h2>
+      <div className="w-full absolute bottom-0">
+        <LogoSlider/>
+      </div>
+    </div>
+  );
 }
