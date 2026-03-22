@@ -21,9 +21,9 @@ export default function ClientReview() {
         <p className="text-2xl">What our happy clients say </p>
         <Link
           href={`/contact`}
-          className="w-50 h-10 font-medium p-5 my-5 text-black bg-white flex items-center  rounded-4xl"
+          className="buttonHover w-50 h-10 font-medium p-5 my-5 text-black bg-white flex items-center  rounded-4xl"
         >
-          <div className="flex items-center">
+          <div className=" flex items-center ">
             <p className="mr-1">Send a message</p>
             <MoveRight />
           </div>

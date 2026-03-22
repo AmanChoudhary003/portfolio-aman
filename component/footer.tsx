@@ -35,7 +35,7 @@ export default function Footer() {
           <ul>
             {socials.map((link, index) => {
               return (
-                <li key={index} className="my-2">
+                <li key={index} className="buttonHover my-2">
                   <Link
                     href={link.href}
                     className="text-xl font-medium text-white "
