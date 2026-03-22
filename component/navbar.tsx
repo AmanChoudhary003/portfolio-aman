@@ -1,10 +1,12 @@
 "use client";
 import Link from "next/link";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { gsap, useGSAP, ScrollTrigger } from "@/lib/gsapConfig";
 
 export default function Navbar() {
+  const navRef = useRef<HTMLDivElement | null>(null);
+
   const [time, setTime] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
@@ -26,7 +28,9 @@ export default function Navbar() {
   }, []);
 
   useGSAP(() => {
-    let nav = "#nav";
+    let nav = navRef.current;
+    if (!nav) return;
+
     let windowScroll = window.scrollY;
 
     const navScroll = () => {
@@ -69,10 +73,9 @@ export default function Navbar() {
     };
   });
 
-  if (!time) return <div>Loading...</div>;
-
   return (
     <div
+      ref={navRef}
       id="nav"
       className="w-full p-5 sm:p-10 sm:py-7 text-white flex justify-between items-center fixed z-100"
     >
@@ -87,7 +90,7 @@ export default function Navbar() {
           <div className="w-2 h-2 bg-lime-500/50  flex  justify-center items-center rounded-full transition-tranform animate-heartBeat">
             <div className=" w-1 h-1 bg-lime-500 rounded-full"></div>
           </div>
-          <p className="  font-bold mx-2">{time}</p>
+          <p className="  font-bold mx-2">{time || "--:--"}</p>
         </div>
 
         <p className="hidden md:block  font-bold mx-2">
