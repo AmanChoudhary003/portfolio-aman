@@ -1,4 +1,4 @@
-export const homeBannerLines = ["Branding", "Application", "Website"];
+export const homeBannerLines = ["Development", "UI Systems", "Web Apps"];
 
 export const companyLogos = [
   "1.svg",
@@ -22,28 +22,57 @@ export const companyLogos = [
 
 export const homeServiceSection = [
   {
-    title: "Modern & Responsive Web Design",
+    title: "Custom Web Development",
     paragraph: [
-      "I design websites that are not only visually appealing but also intuitive and user-friendly.",
+      "I build fully custom-coded websites tailored to your brand, ensuring performance, scalability, and clean architecture.",
     ],
   },
   {
-    title: "High-Valued Web Development",
+    title: "Advanced UI & Interaction Design",
     paragraph: [
-      "Whether it’s a personal portfolio, e-commerce site, or SaaS platform, I focus on delivering fast and secure.",
+      " From smooth animations to GSAP-powered interactions and 3D elements, I create experiences that feel dynamic and engaging.",
     ],
   },
 
   {
-    title: "User Experience& Interface Design",
+    title: "Backend & Database Systems",
     paragraph: [
-      "My process involves research, wireframing, prototyping, and testing to ensure every design is functional.",
+      " I develop secure and efficient backend systems using modern stacks, handling everything from APIs to complex databases.",
     ],
   },
   {
-    title: "Brand Identity & Visual Systems",
+    title: "Full-Stack & Scalable Applications",
     paragraph: [
-      "I help brands define their voice and visual presence through strategic branding. From logos to color palettes.",
+      " Whether it's a startup product, SaaS platform, or business website, I build end-to-end solutions using technologies like Node.js, Next.js, and modern frameworks.",
     ],
+  },
+  {
+    title: "CMS & No-Code Integrations",
+    paragraph: [
+      "From WordPress to Framer and modern AI tools, I create flexible systems that are easy to manage and scale.",
+    ],
+  },
+];
+
+export const workSectionData = [
+  {
+    name: "Kochhars Media Planners",
+    date: "2025",
+    desc: "Web design",
+  },
+  {
+    name: "aashidesignz",
+    date: "2025",
+    desc: "Web design",
+  },
+  {
+    name: "examhub",
+    date: "2024",
+    desc: "Web App",
+  },
+  {
+    name: "mojito",
+    date: "2026",
+    desc: "Web design",
   },
 ];

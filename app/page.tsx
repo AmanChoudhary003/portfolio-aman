@@ -6,6 +6,8 @@ import LogoSlider from "../component/logoslider";
 import { homeBannerLines } from "@/constant/constant";
 import About from "@/component/about";
 import Service from "@/component/service";
+import Work from "@/component/work";
+import ClientReview from "@/component/clientreview";
 
 export default function Home() {
   const [textStyle, setTextStyle] = useState<number>(0);
@@ -50,9 +52,12 @@ export default function Home() {
         <div className="w-full py-5 flex justify-between items-center   flex-wrap  ">
           <div className="h-full">
             <p className="text-xl">
-              <span className="text-white">Turning ideas into </span>{" "}
-              experiences that
-              <br /> leave a lasting impression.
+              <span className="text-white">
+                {" "}
+                Turning complex ideas into high-performing <br /> digital
+                experiences
+              </span>{" "}
+              that feel seamless and look exceptional.
             </p>
           </div>
           <div className="hidden md:block">
@@ -85,20 +90,19 @@ export default function Home() {
           </div>
         </div>
         <h1 className="highlightFont text-white text-6xl md:text-8xl font-bold">
-          AMAN <br /> CHOUDHARY{" "}
-          <span className="-ml-4  text-(--highlightColor)">.</span>
+          AMAN <br /> CHOUDHARY
+          <span className=" text-(--highlightColor)">.</span>
         </h1>
       </div>
       <div className="p-10">
         <p className="text-white/60">Brand That Believe in my work</p>
         <LogoSlider />
       </div>
-      <div>
-        <About />
-      </div>
-      <div>
-        <Service />
-      </div>
+
+      <About />
+      <Service />
+      {/* <Work /> */}
+      <ClientReview />
     </div>
   );
 }
