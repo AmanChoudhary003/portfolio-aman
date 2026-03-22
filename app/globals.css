@@ -2,14 +2,15 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000;
   --highlightColor: rgb(248, 68, 46);
-  --font: var(--font-big-shoulders);
+  --textHighlight: var(--font-big-shoulders);
+  --font: var(--font-geist);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--foreground);
+  color: rgba(255, 255, 255, 0.5);
   font-family: var(--font);
 }
 
@@ -17,41 +18,20 @@ body {
   .animate-heartBeat {
     animation: heartBeat 0.5s ease-in-out alternate-reverse infinite;
   }
+  .highlightFont {
+    font-family: var(--textHighlight);
+  }
+  .marqueeScroll {
+    animation: scrollAnimate 30s linear infinite;
+  }
 }
 /* *********** */
 /* navbar */
 /* *********** */
 
-/* hamburger menu button animation */
-/* 
-.line {
-  position: absolute;
-  width: 90%;
-  height: 3px;
-  background-color: black;
-  border-radius: 20px;
-  transform: translate(0, -50%);
-}
-
-.line:nth-child(1) {
-  top: 40%;
-  left: 5%;
-}
-.line:nth-child(2) {
-  top: 60%;
-  left: 5%;
-}
-.dot:nth-child(3) {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width:4px;
-  height: 4px;
-  border-radius: 50%;
-  background-color: black;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-} */
+/* *********************** */
+/* keyframe animation */
+/* *********************** */
 
 @keyframes heartBeat {
   from {
@@ -59,5 +39,14 @@ body {
   }
   to {
     transform: scale(1.5);
+  }
+}
+
+@keyframes scrollAnimate {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }

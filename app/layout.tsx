@@ -1,14 +1,19 @@
 import type { Metadata } from "next";
 
-import Navbar from "./component/navbar";
+import Navbar from "../component/navbar";
 import "./globals.css";
 
-import { Big_Shoulders } from "next/font/google";
+import { Big_Shoulders, Geist } from "next/font/google";
 
 const bigShoulders = Big_Shoulders({
   subsets: ["latin"],
+  variable: "--font-big-shoulders",
 });
 
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist",
+});
 
 export const metadata: Metadata = {
   title: "Portfolio-Aman",
@@ -21,7 +26,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${bigShoulders.className}  h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${bigShoulders.variable} ${geist.variable}   h-full antialiased`}
+    >
       <body className="min-h-full flex flex-col">
         <Navbar />
         {children}
