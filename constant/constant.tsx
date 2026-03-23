@@ -1,13 +1,14 @@
 export const pageLink = [
   { href: "/", label: "Home" },
   {
-    href: "/contact",
-    label: "Contact",
-  },
-  {
     href: "/work",
     label: "Work",
   },
+  {
+    href: "/contact",
+    label: "Contact",
+  },
+
   {
     href: "/privacypolicy",
     label: "Pirvacy Policy",

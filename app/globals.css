@@ -35,7 +35,6 @@ body {
       rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
   .buttonHover:hover {
-  
     transition: transform ease-in-out 0.3s;
     transform: translate(0, -5px);
   }
@@ -63,5 +62,16 @@ body {
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+/* **************** */
+/* media Query */
+/* ******************* */
+
+@media (max-width: 768) {
+  .swiper-wrapper {
+    width: 90vw !important;
+    height: 15rem !important;
   }
 }

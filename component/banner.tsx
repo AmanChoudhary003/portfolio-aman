@@ -29,6 +29,7 @@ export default function Banner() {
         className="-z-10"
         id="bannerBackgroundImg"
         alt="bannerBackgroundimg"
+        loading="eager"
       />
 
       <h2 className="highlightFont text-4xl sm:text-6xl md:text-8xl text-center font-bold text-white">
@@ -38,7 +39,7 @@ export default function Banner() {
           <span className="text-(--highlightColor)">.</span>
         </span>
       </h2>
-      <div className="w-full absolute bottom-0">
+      <div className="w-full absolute -bottom-6">
         <LogoSlider/>
       </div>
     </div>

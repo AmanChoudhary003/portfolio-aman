@@ -4,17 +4,19 @@ import LoopingText from "./loopingtext";
 
 export default function Footer() {
   return (
-    <div className=" p-5 sm:p-15">
+    <div className=" p-5 pt-10 sm:p-15 sm:pt-32  rounded-t-4xl  ">
       <div>
-        <p className="text-2xl mb-2 ">REACH OUT ANYTIME</p>
+        <p className="md:text-2xl mb-2 ">REACH OUT ANYTIME</p>
         <a href="mailto:codeac200@gmail.com?subject=Hello&body=I%20want%20to%20connect">
-          <h2 className="buttonHover md:text-5xl text-white font-bold">
-            Send Mail
-          </h2>
+          <div className="flex items-center buttonHover">
+            <h2 className=" text-4xl md:text-5xl text-white font-bold">
+              Send Mail
+            </h2>
+          </div>
         </a>
       </div>
 
-      <div className="w-70  my-10 flex justify-between ">
+      <div className="w-80  my-10 flex justify-between ">
         <div className="mr-10">
           <ul>
             {pageLink.map((link, index) => {
@@ -24,7 +26,7 @@ export default function Footer() {
                     href={link.href}
                     className=" text-xl font-medium text-white "
                   >
-                    {link.label}
+                    {link.label.toUpperCase()}
                   </Link>
                 </li>
               );
@@ -40,7 +42,7 @@ export default function Footer() {
                     href={link.href}
                     className="text-xl font-medium text-white "
                   >
-                    {link.label}
+                    {link.label.toUpperCase()}
                   </Link>
                 </li>
               );

@@ -8,9 +8,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { testimonial } from "@/constant/constant";
 import { Autoplay } from "swiper/modules";
+import WindowWidth from "@/hook/windowResize";
 
 export default function ClientReview() {
   const [activeSlide, setActiveSlide] = useState<number>(1);
+
   return (
     <div className=" p-5 sm:p-15 flex justify-between items-center flex-wrap">
       <div className="sm:w-[45%]  mb-5">
@@ -31,11 +33,11 @@ export default function ClientReview() {
       </div>
       <div className="  ">
         <Swiper
-          className="sm:w-60 md:w-100 h-120   overflow-visible"
+          className="sm:w-60 md:w-100 md:h-120   overflow-visible"
           modules={[Autoplay]}
-          direction="vertical"
+          // direction={WindowWidth() ? "horizontal" : "vertical"}
           spaceBetween={10}
-          slidesPerView={3}
+          // slidesPerView={WindowWidth() ? 1 : 3}
           centeredSlides={true}
           centeredSlidesBounds={true}
           // loop={true}
@@ -44,12 +46,23 @@ export default function ClientReview() {
             disableOnInteraction: false,
           }}
           speed={700}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+              direction: "horizontal",
+            },
+            768: {
+              slidesPerView: 3,
+              direction: "vertical",
+            },
+          }}
           onSlideChange={(swiper) => setActiveSlide(swiper.activeIndex)}
           onSwiper={(swiper) => setActiveSlide(swiper.activeIndex)}
         >
           {testimonial.map((review, index) => {
             return (
               <SwiperSlide
+                key={index}
                 className={` border p-5 pr-10 rounded-lg  boxShadow relative'
               ${
                 activeSlide == index
@@ -58,10 +71,12 @@ export default function ClientReview() {
               }
               `}
               >
-                <p className="text-xl text-white font-bold mb-2">{review.client}</p>
+                <p className="text-xl text-white font-bold mb-2">
+                  {review.client}
+                </p>
                 <p className="text-white">{`"${review.review} "`}</p>
                 <div
-                  className={`w-2 h-full  rounded-4xl absolute top-0 left-0  transition-all duration-500
+                  className={`w-2 h-full   rounded-4xl absolute top-0 left-0  transition-all duration-500
                          ${
                            activeSlide == index
                              ? "bg-(--highlightColor)"
@@ -79,7 +94,6 @@ export default function ClientReview() {
               </SwiperSlide>
             );
           })}
-          ...
         </Swiper>
       </div>
     </div>

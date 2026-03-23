@@ -26,7 +26,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="w-full h-screen  p-5 sm:p-15  flex flex-wrap items-end relative rounded-4xl">
+      <div className="w-full h-screen  p-5 pb-20 sm:p-15  flex flex-wrap items-end relative rounded-4xl">
         <Image
           src={`/images/32908346_278261219198.jpg`}
           fill
@@ -48,12 +48,12 @@ export default function Home() {
           </div>
           <LoopingText />
         </div>
-        <h1 className="name highlightFont text-white text-6xl md:text-8xl font-bold">
+        <h1 className="name highlightFont   text-white text-6xl md:text-8xl font-bold  ">
           AMAN <br /> CHOUDHARY
           <span className=" text-(--highlightColor)">.</span>
         </h1>
       </div>
-      <div className="p-15">
+      <div className="p-5 sm:p-15 ">
         <p className="text-white/60">Brand That Believe in my work</p>
         <LogoSlider />
       </div>
