@@ -17,12 +17,21 @@ export const pageLink = [
 
 export const socials = [
   {
-    href: "/",
     label: "Linkedin",
+    imgSrc: "linkedin.svg",
+    link: "https://www.linkedin.com/in/aman-choudhary-a376b2239/",
   },
-  { href: "/", label: "Github" },
+  {
+    label: "Instagram",
+    imgSrc: "instagram.svg",
+    link: "https://www.instagram.com/codeac200/",
+  },
+  {
+    label: "github",
+    imgSrc: "github.svg",
+    link: "https://github.com/AmanChoudhary003",
+  },
 ];
-
 export const homeBannerLines = ["Development", "UI Systems", "Web Apps"];
 
 export const companyLogos = [

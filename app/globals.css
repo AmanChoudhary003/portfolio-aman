@@ -43,6 +43,30 @@ body {
 /* navbar */
 /* *********** */
 
+/* *************** */
+/* form Input */
+/* ****************** */
+input:focus {
+  color: white;
+  border-bottom: 2px solid var(--highlightColor);
+  outline: none;
+}
+
+textarea:focus {
+  border-bottom: 2px solid var(--highlightColor);
+  outline: none;
+}
+
+/* ************************** */
+/* gsap animation intial state */
+/* ************************** */
+#text404 span,
+#homepageReturn,
+#serviceTab .headingDiv {
+  opacity: 0;
+  transform: translate(0, 50px);
+}
+
 /* *********************** */
 /* keyframe animation */
 /* *********************** */

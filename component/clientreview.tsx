@@ -39,7 +39,7 @@ export default function ClientReview() {
           spaceBetween={10}
           // slidesPerView={WindowWidth() ? 1 : 3}
           centeredSlides={true}
-          centeredSlidesBounds={true}
+          // centeredSlidesBounds={true}
           // loop={true}
           autoplay={{
             delay: 3000,

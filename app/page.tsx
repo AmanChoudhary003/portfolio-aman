@@ -13,9 +13,9 @@ import { gsap, useGSAP, SplitText } from "@/lib/gsapConfig";
 
 export default function Home() {
   useGSAP(() => {
-    const headline = SplitText.create(".heroSectionPara", { type: "words" });
+    const headline = SplitText.create(".heroSectionPara", { type: "lines" });
     const name = SplitText.create(".name", { type: "words" });
-    gsap.from([headline.words, name.words], {
+    gsap.from([headline.lines, name.words], {
       opacity: 0,
       y: 50,
       duration: 1,
@@ -48,7 +48,7 @@ export default function Home() {
           </div>
           <LoopingText />
         </div>
-        <h1 className="name highlightFont   text-white text-6xl md:text-8xl font-bold  ">
+        <h1 className="name highlightFont   text-white text-6xl md:text-8xl font-bold mb-15 ">
           AMAN <br /> CHOUDHARY
           <span className=" text-(--highlightColor)">.</span>
         </h1>

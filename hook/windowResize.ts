@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 
-export default function WindowWidth() {
+export default function IsMobile() {
   const [isMobile, setMobile] = useState<boolean>(false);
 
   useEffect(() => {
