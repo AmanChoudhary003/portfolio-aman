@@ -7,15 +7,18 @@ import isMobile from "@/hook/windowResize";
 export default function Banner() {
   const mobile = isMobile();
   useGSAP(() => {
-    gsap.to("#bannerBackgroundImg", {
-      scale: 1.5,
-      ease: "none",
+    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#banner",
         start: mobile ? "top top" : "top bottom",
         end: "bottom bottom",
         scrub: true,
       },
+    });
+
+    tl.to("#bannerBackgroundImg", {
+      scale: 1.5,
+      ease: "none",
     });
   });
 
@@ -41,7 +44,6 @@ export default function Banner() {
           <span className="text-(--highlightColor)">.</span>
         </span>
       </h2>
- 
     </div>
   );
 }

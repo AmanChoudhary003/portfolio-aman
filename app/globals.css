@@ -67,9 +67,16 @@ textarea:focus {
   transform: translate(0, 50px);
 }
 
+.socialIconContainer{
+  transform: translate(-34, 0);
+}
+
 /* *********************** */
 /* keyframe animation */
 /* *********************** */
+
+
+
 
 @keyframes heartBeat {
   from {
@@ -98,4 +105,7 @@ textarea:focus {
     width: 90vw !important;
     height: 15rem !important;
   }
+  .socialIconContainer{
+  transform: translate(-70, 0);
+}
 }

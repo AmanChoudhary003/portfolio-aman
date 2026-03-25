@@ -1,16 +1,37 @@
 "use client";
 
 import { Mail, Phone, SendHorizontal } from "lucide-react";
-import { useState, useActionState } from "react";
+import { useRef, useActionState } from "react";
 import { FormAction } from "@/lib/mail";
 import Link from "next/link";
 import Image from "next/image";
 import { socials } from "@/constant/constant";
+import { gsap, useGSAP } from "@/lib/gsapConfig";
+import isMobile from "@/hook/windowResize";
 
 export default function Contact() {
+  const iconRef = useRef<HTMLDivElement>(null);
+  const mobile = isMobile();
+
   const [form, formAction, isPending] = useActionState(FormAction, {
     success: false,
   });
+
+  useGSAP(() => {
+    if (!iconRef.current) return;
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: iconRef.current,
+        start: "top 80%",
+        scrub: true,
+        toggleActions: "play none none reset",
+      },
+    });
+    tl.to(iconRef.current, {
+      x: 0,
+      duration: 0.5,
+    });
+  }, [mobile]);
 
   return (
     <div className="w-full h-fit md:h-screen p-5 md:p-15 pt-30 md:pt-30  md:flex justify-between items-center">
@@ -52,7 +73,7 @@ export default function Contact() {
               </label>{" "}
               <br />
               <input
-                type="text"
+                type="email"
                 placeholder="email01@domail.com"
                 className="w-full py-2 border-b-2  text-sm"
                 name="email"
@@ -69,15 +90,16 @@ export default function Contact() {
               name="phone"
               placeholder="+919402947599"
               type="text"
-              maxLength={14}
+              maxLength={15}
               inputMode="numeric"
-              pattern="[0-9]*"
-              className="w-full py-2 border-b-2  text-sm"
-              required
+              pattern="[0-9+]*"
+              className="w-full py-2 border-b-2 text-sm"
               onChange={(e) => {
                 let value = e.currentTarget.value.replace(/[^0-9+]/g, "");
-                if (value.includes("+")) {
-                  value = "+" + value.replace(/\+/g, "").replace(/^\+/, "");
+                if (value.startsWith("+")) {
+                  value = "+" + value.slice(1).replace(/\+/g, "");
+                } else {
+                  value = value.replace(/\+/g, "");
                 }
                 e.currentTarget.value = value;
               }}
@@ -96,7 +118,10 @@ export default function Contact() {
               required
             ></textarea>
           </div>
-          <button className=" w-30 h-10 m-2 my-5 border submit bg-white text-black flex items-center justify-center rounded-md cursor-pointer ">
+          <button
+            disabled={isPending}
+            className=" w-30 h-10 m-2 my-5 border submit bg-white text-black flex items-center justify-center rounded-md cursor-pointer "
+          >
             <p className="font-bold mr-2">
               {isPending ? "SENDING... " : "SEND"}
             </p>
@@ -104,7 +129,10 @@ export default function Contact() {
           </button>
         </form>
         <div className="">
-          <div className="flex justify-end items-end  mr-8">
+          <div
+            ref={iconRef}
+            className="socialIconContainer flex justify-end items-end "
+          >
             {socials.map((logo, index) => {
               return (
                 <Link key={index} href={`${logo.link}`}>
