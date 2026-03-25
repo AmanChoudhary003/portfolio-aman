@@ -6,8 +6,11 @@ import LogoSlider from "../component/logoslider";
 import About from "@/component/about";
 import Service from "@/component/service";
 import Banner from "@/component/banner";
-import Work from "@/component/work";
+import ProjectSection from "@/component/work";
 import ClientReview from "@/component/clientreview";
+import Tool from "@/component/tool";
+import Link from "next/link";
+import { MoveRight } from "lucide-react";
 
 import { gsap, useGSAP, SplitText } from "@/lib/gsapConfig";
 
@@ -60,7 +63,29 @@ export default function Home() {
 
       <About />
       <Service />
-      {/* <Work /> */}
+      <div className="p-10">
+        <div className="flex justify-between items-end">
+          <h2 className="highlightFont text-white text-6xl md:text-9xl font-bold">
+            SELECTED <br /> WORKS
+            <span className="text-(--highlightColor)">.</span>
+          </h2>
+
+          <Link
+            href={`/work`}
+            className="w-50 h-10 font-medium p-5  text-black bg-white flex items-center  rounded-4xl"
+          >
+            <div className="flex items-center">
+              <p className="mr-1">View all my work</p>
+              <MoveRight />
+            </div>
+          </Link>
+        </div>
+        <ProjectSection />
+      </div>
+      <div className="my-5 ">
+        <p className="highlightFont text-4xl text-center mb-20">TOOLS I WORK WITH</p>
+        <Tool />
+      </div>
       <ClientReview />
       <Banner />
     </div>

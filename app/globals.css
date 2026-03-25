@@ -38,6 +38,9 @@ body {
     transition: transform ease-in-out 0.3s;
     transform: translate(0, -5px);
   }
+  .pulse-line {
+    animation: move 2s linear infinite;
+  }
 }
 /* *********** */
 /* navbar */
@@ -67,16 +70,13 @@ textarea:focus {
   transform: translate(0, 50px);
 }
 
-.socialIconContainer{
+.socialIconContainer {
   transform: translate(-34, 0);
 }
 
 /* *********************** */
 /* keyframe animation */
 /* *********************** */
-
-
-
 
 @keyframes heartBeat {
   from {
@@ -95,7 +95,14 @@ textarea:focus {
     transform: translateX(-50%);
   }
 }
-
+@keyframes move {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 /* **************** */
 /* media Query */
 /* ******************* */
@@ -105,7 +112,7 @@ textarea:focus {
     width: 90vw !important;
     height: 15rem !important;
   }
-  .socialIconContainer{
-  transform: translate(-70, 0);
-}
+  .socialIconContainer {
+    transform: translate(-70, 0);
+  }
 }

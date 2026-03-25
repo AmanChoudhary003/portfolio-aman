@@ -93,21 +93,31 @@ export const workSectionData = [
     name: "Kochhars Media Planners",
     date: "2025",
     desc: "Web design",
+    link: "https://kochharsmediaplanners.com",
   },
   {
-    name: "aashidesignz",
+    name: "Aashidesignz",
     date: "2025",
     desc: "Web design",
+    link: "https://aashidesignz.com",
   },
   {
-    name: "examhub",
+    name: "Examhub",
     date: "2024",
     desc: "Web App",
+    link: "",
   },
   {
-    name: "mojito",
+    name: "Mojito",
     date: "2026",
     desc: "Web design",
+    link: "https://mojito-azure.vercel.app",
+  },
+  {
+    name: "Portfolio",
+    date: "2026",
+    desc: "Web design",
+    link: "",
   },
 ];
 
