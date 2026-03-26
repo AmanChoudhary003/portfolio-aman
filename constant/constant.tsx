@@ -11,7 +11,7 @@ export const pageLink = [
 
   {
     href: "/privacypolicy",
-    label: "Pirvacy Policy",
+    label: "Privacy Policy",
   },
 ];
 

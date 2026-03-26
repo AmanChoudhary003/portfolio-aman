@@ -64,12 +64,11 @@ export default function Home() {
       <About />
       <Service />
       <div className="p-10">
-        <div className="flex justify-between items-end">
-          <h2 className="highlightFont text-white text-6xl md:text-9xl font-bold">
+ <div className="flex justify-between items-end flex-wrap">
+          <h2 className="highlightFont text-white text-6xl md:text-9xl font-bold mb-10 sm:mb-0 ">
             SELECTED <br /> WORKS
             <span className="text-(--highlightColor)">.</span>
           </h2>
-
           <Link
             href={`/work`}
             className="w-50 h-10 font-medium p-5  text-black bg-white flex items-center  rounded-4xl"
