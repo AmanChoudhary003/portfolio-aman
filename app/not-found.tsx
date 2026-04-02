@@ -1,31 +1,40 @@
 "use client";
 
 import Link from "next/link";
-import { gsap, useGSAP, SplitText } from "@/lib/gsapConfig";
+import { useRef } from "react";
+import { gsap, useGSAP } from "@/lib/gsapConfig";
 
 export default function NotFound() {
-  useGSAP(() => {
-    gsap.to("#text404 span", {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      stagger: 0.05,
-      ease: "power1.inOut",
-    });
-  });
-  useGSAP(() => {
-    gsap.to("#homepageReturn", {
-      opacity: 1,
-      y: 0,
-      duration: 0.5,
-      stagger: 0.05,
-      ease: "power1.inOut",
-    });
-  });
+  const container = useRef<HTMLDivElement>(null);
+  useGSAP(
+    () => {
+      const tl = gsap.timeline();
+
+      tl.to("#text404 span", {
+        opacity: 1,
+        y: 100,
+        duration: 1,
+        stagger: 0.05,
+        ease: "power1.inOut",
+      });
+      tl.to("#homepageReturn", {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        stagger: 0.05,
+        ease: "power1.inOut",
+
+      }, "-=0.7");
+    },
+    { scope: container },
+  );
 
   return (
     <div className="w-full h-screen flex justify-center items-center">
-      <div className="w-full h-screen flex flex-col justify-center items-center">
+      <div
+        ref={container}
+        className="w-full h-screen flex flex-col justify-center items-center"
+      >
         <h2
           id="text404"
           className=" highlightFont text-[15rem] md:text-[30vw] -ml-10 md:-ml-15 text-white -tracking-[1.5rem] md:-tracking-[3rem] font-bold leading-none"

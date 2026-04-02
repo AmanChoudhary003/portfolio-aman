@@ -40,6 +40,8 @@ export default function Footer() {
                 <li key={index} className="buttonHover my-2">
                   <Link
                     href={link.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-xl font-medium text-white "
                   >
                     {link.label.toUpperCase()}

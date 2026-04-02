@@ -84,7 +84,6 @@ export default function Tool() {
                 y={line ? line.imgPos.y : ""}
                 width="45"
                 height="45"
-                className="hover:text-red-500"
               />
             </g>
           );

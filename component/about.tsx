@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useRef } from "react";
+import { ArrowDownToLine } from "lucide-react";
 import { gsap, useGSAP, SplitText } from "@/lib/gsapConfig";
 export default function About() {
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -26,12 +27,23 @@ export default function About() {
           stagger: 0.05,
         });
       });
+      gsap.to("#resumeBtn", {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "back.out(2)",
+        scrollTrigger: {
+          trigger: aboutRef.current,
+          start: "top top",
+        },
+      });
     },
+
     { scope: aboutRef },
   );
 
   return (
-    <div ref={aboutRef} className="h-190 sm:h-170 md:h-150 lg:h-170 p-5 sm:p-15 ">
+    <div ref={aboutRef} className="h-210 sm:h-200 md:h-150 p-5 sm:p-15 ">
       <h2 className="highlightFont text-white text-6xl md:text-8xl font-bold my-2">
         ABOUT
         <span className="  text-(--highlightColor)">.</span>
@@ -67,6 +79,18 @@ export default function About() {
             immersive web experiences. I’m constantly learning, refining, and
             pushing my creative boundaries.
           </p>
+          <div id="resumeBtn" className=" mt-10">
+            <a
+              href={`/pdf/Aman_Choudhary_Resume.pdf`}
+              download={`Aman_Choudhary_Resume.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-fit flex  px-10 py-3 font-bold border rounded-3xl transition-all duration-300 hover:text-black hover:bg-white group"
+            >
+              DOWNLOAD RESUME{" "}
+              <ArrowDownToLine className="ml-2 transition-all duration-300 group-hover:text-black" />
+            </a>
+          </div>
         </div>
       </div>
     </div>

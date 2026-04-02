@@ -135,7 +135,12 @@ export default function Contact() {
           >
             {socials.map((logo, index) => {
               return (
-                <Link key={index} href={`${logo.link}`}>
+                <Link
+                  key={index}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={`${logo.link}`}
+                >
                   <div className="w-10 h-10 rounded-sm m-1  bg-(--highlightColor) relative cursor-pointer">
                     <Image
                       src={`/images/${logo.imgSrc}`}
