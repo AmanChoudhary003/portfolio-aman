@@ -3,6 +3,8 @@ import "./globals.css";
 import Navbar from "../component/navbar";
 import Footer from "@/component/footer";
 import Whatsapp from "@/component/whatsappButton";
+
+import CookieBanner from "@/component/cookiebanner";
 import Analytics from "@/component/analytics";
 
 import { Big_Shoulders, Geist } from "next/font/google";
@@ -53,6 +55,7 @@ export default function RootLayout({
       className={`${bigShoulders.variable} ${geist.variable}   h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <CookieBanner />
         <Analytics />
         <Navbar />
         {children}
