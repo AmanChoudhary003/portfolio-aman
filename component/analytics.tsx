@@ -10,7 +10,7 @@ export default function Analytics() {
       <Script>
         {`window.dataLayer = window.dataLayer || []; function gtag()
         {window.dataLayer.push(arguments)}
-        gtag('js', new Date()); gtag('config', process.env.G_ID)`}
+        gtag('js', new Date()); gtag('config', ${process.env.G_ID})`}
       </Script>
     </>
   );
