@@ -44,10 +44,10 @@ export default function About() {
 
   return (
     <div ref={aboutRef} className="h-210 sm:h-200 md:h-150 p-5 sm:p-15 ">
-      <h2 className="highlightFont text-white text-6xl md:text-8xl font-bold my-2">
+      <p className="highlightFont text-white text-6xl md:text-8xl font-bold my-2">
         ABOUT
         <span className="  text-(--highlightColor)">.</span>
-      </h2>
+      </p>
       <div className="h-100 md:flex  justify-between my-5">
         <div className="w-full md:w-[45%] h-50 sm:h-70 md:h-full mb-10  relative ">
           <Image
