@@ -14,7 +14,9 @@ export default function PrivacyPolicy() {
         using the website.
       </p>
       <div className="py-5">
-        <h2 className="text-4xl text-white font-bold mb-5">1. General Use of the Website</h2>
+        <h2 className="text-4xl text-white font-bold mb-5">
+          1. General Use of the Website
+        </h2>
         <p>
           This website is created to showcase Aman Choudhary’s work in
           development, UI systems, and digital product engineering, and to
@@ -24,35 +26,53 @@ export default function PrivacyPolicy() {
         <ul className="my-3">
           <li className="ml-5"> View and explore the website</li>
           <li className="ml-5"> Contact through email or forms</li>
-          <li className="ml-5"> Share website links for non-commercial purposes</li>
+          <li className="ml-5">
+            {" "}
+            Share website links for non-commercial purposes
+          </li>
         </ul>
         <p>You may not:</p>
         <ul className="my-3">
           Copy, reproduce, or redistribute any work without written permission
         </ul>
-        <ul className="my-3">Attempt to modify, exploit, or hack the website</ul>
-        <ul className="my-3">Use the website for illegal, harmful, or abusive purposes</ul>
+        <ul className="my-3">
+          Attempt to modify, exploit, or hack the website
+        </ul>
+        <ul className="my-3">
+          Use the website for illegal, harmful, or abusive purposes
+        </ul>
         <p>Misuse may result in restricted access.</p>
       </div>
-           <div className="py-5">
-        <h2 className="text-4xl text-white font-bold mb-5">2. Information You Provide</h2>
+      <div className="py-5">
+        <h2 className="text-4xl text-white font-bold mb-5">
+          2. Information You Provide
+        </h2>
         <p>When you contact through this website, you agree that:</p>
         <ul className="my-3">
-          <li className="ml-5"> All information provided is accurate and lawful</li>
-          <li className="ml-5"> You will not send harmful, abusive, or malicious content</li>
-          <li className="ml-5"> 
+          <li className="ml-5">
+            {" "}
+            All information provided is accurate and lawful
+          </li>
+          <li className="ml-5">
+            {" "}
+            You will not send harmful, abusive, or malicious content
+          </li>
+          <li className="ml-5">
             Your data will be handled according to the Privacy Policy below
           </li>
         </ul>
       </div>
-           <div className="py-5">
-        <h2 className="text-4xl text-white font-bold mb-5">3. Privacy Policy</h2>
+      <div className="py-5">
+        <h2 className="text-4xl text-white font-bold mb-5">
+          3. Privacy Policy
+        </h2>
         <p>This section explains how your data is collected and used.</p>
         <p className="text-white font-bold my-2">Information Collected</p>
         <p>Only voluntarily shared information is collected, such as:</p>
         <ul className="my-3">
           <li className="ml-5"> Name</li>
-          <li className="ml-5"> Email address</li> <li className="ml-5"> Phone number</li>
+          <li className="ml-5"> Email address</li>{" "}
+          <li className="ml-5"> Phone number</li>
           <li className="ml-5"> Project details or message</li>
         </ul>
         <p>Additionally, basic analytics data may be collected:</p>
@@ -62,7 +82,9 @@ export default function PrivacyPolicy() {
           <li className="ml-5"> Pages visited</li>
           <li className="ml-5"> Approximate location</li>
         </ul>
-        <p className="text-white font-bold my-2">How Your Information Is Used</p>
+        <p className="text-white font-bold my-2">
+          How Your Information Is Used
+        </p>
         <p>Your data may be used for:</p>
         <ul className="my-3">
           <li className="ml-5"> Responding to inquiries</li>
@@ -104,8 +126,10 @@ export default function PrivacyPolicy() {
           This website is not intended for individuals under 13 years of age.
         </p>
       </div>
-           <div className="py-5">
-        <h2 className="text-4xl text-white font-bold mb-5">4. Intellectual Property</h2>
+      <div className="py-5">
+        <h2 className="text-4xl text-white font-bold mb-5">
+          4. Intellectual Property
+        </h2>
         <p>All content on this website, including:</p>
         <ul className="my-3">
           <li className="ml-5"> Code</li>
@@ -119,12 +143,17 @@ export default function PrivacyPolicy() {
         <p>You may not:</p>
         <ul className="my-3">
           <li className="ml-5"> Claim any work as your own</li>
-          <li className="ml-5"> Use any content for commercial purposes without permission</li>
+          <li className="ml-5">
+            {" "}
+            Use any content for commercial purposes without permission
+          </li>
         </ul>
         <p>For permissions, direct contact is required.</p>
       </div>
-           <div className="py-5">
-        <h2 className="text-4xl text-white font-bold mb-5">5. Service Related Terms</h2>
+      <div className="py-5">
+        <h2 className="text-4xl text-white font-bold mb-5">
+          5. Service Related Terms
+        </h2>
         <p>
           This website is for showcasing work. All services are handled through
           direct communication.
@@ -132,16 +161,28 @@ export default function PrivacyPolicy() {
         <p className="text-white font-bold my-2">Project Engagement</p>
         <p>Once a project begins:</p>
         <ul className="my-3">
-          <li className="ml-5"> Scope, timelines, and pricing are defined individually</li>
-          <li className="ml-5"> You agree not to misuse code, systems, or drafts</li>
-          <li className="ml-5"> Deliverables are shared based on agreed terms</li>
+          <li className="ml-5">
+            {" "}
+            Scope, timelines, and pricing are defined individually
+          </li>
+          <li className="ml-5">
+            {" "}
+            You agree not to misuse code, systems, or drafts
+          </li>
+          <li className="ml-5">
+            {" "}
+            Deliverables are shared based on agreed terms
+          </li>
         </ul>
         <p className="text-white font-bold my-2">Refund Policy</p>
         <p>Due to the nature of custom development work:</p>
         <p>Refunds are not offered once:</p>
         <ul className="my-3">
           <li className="ml-5"> Development has started</li>
-          <li className="ml-5"> Concepts, systems, or code have been delivered</li>
+          <li className="ml-5">
+            {" "}
+            Concepts, systems, or code have been delivered
+          </li>
         </ul>
         <p>Refunds may only be considered if:</p>
         <ul className="my-3">
@@ -149,8 +190,10 @@ export default function PrivacyPolicy() {
           <li className="ml-5"> No deliverables have been shared</li>
         </ul>
       </div>
-           <div className="py-5">
-        <h2 className="text-4xl text-white font-bold mb-5">6. External Links</h2>
+      <div className="py-5">
+        <h2 className="text-4xl text-white font-bold mb-5">
+          6. External Links
+        </h2>
         <p>
           This website may include links to third-party platforms like LinkedIn
           or GitHub.
@@ -163,8 +206,10 @@ export default function PrivacyPolicy() {
         </ul>
         <p>Users should review third-party terms independently.</p>
       </div>
-           <div className="py-5">
-        <h2 className="text-4xl text-white font-bold mb-5">7. Website Disclaimer</h2>
+      <div className="py-5">
+        <h2 className="text-4xl text-white font-bold mb-5">
+          7. Website Disclaimer
+        </h2>
         <p>
           All content is provided for general information and portfolio
           purposes.
@@ -178,8 +223,10 @@ export default function PrivacyPolicy() {
         </ul>
         <p>Use of this website is at your own risk.</p>
       </div>
-           <div className="py-5">
-        <h2 className="text-4xl text-white font-bold mb-5">8. Limitation of Liability</h2>
+      <div className="py-5">
+        <h2 className="text-4xl text-white font-bold mb-5">
+          8. Limitation of Liability
+        </h2>
         <p>Aman Choudhary is not liable for:</p>
         <ul className="my-3">
           <li className="ml-5"> Data loss</li>
@@ -192,31 +239,35 @@ export default function PrivacyPolicy() {
         </ul>
         <p>Your use of the website confirms acceptance of these limitations.</p>
       </div>
-           <div className="py-5">
-        <h2 className="text-4xl text-white font-bold mb-5">9. Changes to Terms</h2>
+      <div className="py-5">
+        <h2 className="text-4xl text-white font-bold mb-5">
+          9. Changes to Terms
+        </h2>
         <p>
           These terms may be updated periodically. Continued use of the website
           means acceptance of any updates.
         </p>
       </div>
-           <div className="py-5">
-        <h2 className="text-4xl text-white font-bold mb-5">10. Contact Information</h2>
+      <div className="py-5">
+        <h2 className="text-4xl text-white font-bold mb-5">
+          10. Contact Information
+        </h2>
         <p>For any questions regarding these terms:</p>
         <ul className="my-3">
-          <li className="ml-5"> 
+          <li className="ml-5">
             <span className="font-bold">Name:</span> Aman Choudhary
           </li>
-          <li className="ml-5"> 
+          <li className="ml-5">
             <span className="font-bold">Location:</span> New Delhi, India
           </li>
-          <li className="ml-5"> 
+          <li className="ml-5">
             <span className="font-bold">Email:</span> codeac200@gmail.com
           </li>
 
-          <li className="ml-5"> 
+          <li className="ml-5">
             <span className="font-bold">Phone:</span> +91 7033077384
           </li>
-          <li className="ml-5"> 
+          <li className="ml-5">
             <span className="font-bold">Website:</span>
           </li>
         </ul>

@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "../component/navbar";
 import Footer from "@/component/footer";
 import Whatsapp from "@/component/whatsappButton";
-
+import DocumentTitle from "@/hook/docTitle";
 import CookieBanner from "@/component/cookiebanner";
 import Analytics from "@/component/analytics";
 
@@ -20,7 +20,6 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Aman Choudhary | Full Stack Developer & MERN Specialist",
   description:
     "Explore the professional systems development and design work by Aman. Specializing in robust architectural systems.",
   icons: {
@@ -55,6 +54,7 @@ export default function RootLayout({
       className={`${bigShoulders.variable} ${geist.variable}   h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <DocumentTitle />
         <CookieBanner />
         <Analytics />
         <Navbar />

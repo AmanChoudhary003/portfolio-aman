@@ -1,11 +1,12 @@
+"use client";
 import Link from "next/link";
 import ProjectSection from "@/component/work";
 import { MoveRight } from "lucide-react";
 import Tool from "@/component/tool";
 import ClientReview from "@/component/clientreview";
 
-export default function Work() {
 
+export default function Work() {
 
   return (
     <div className="w-full h-full  p-5 md:p-15 pt-30 md:pt-40 ">
