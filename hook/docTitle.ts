@@ -11,7 +11,7 @@ export default function DocumentTitle() {
       .replace(/^\//, "") // Remove first slash
       .replace(/[-_]/g, " ") // Replace dashes with spaces
       .split("|")
-      .pop() || "Home"; // Get the last part of the path or "Home"
+      .pop() || "Aman Choudhary"; // Get the last part of the path or "Home"
 
   useEffect(() => {
     document.title = `Portfolio | ${cleanTitle.slice(0,1 ).toUpperCase()+ cleanTitle.slice(1)}`;
