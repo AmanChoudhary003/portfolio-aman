@@ -131,9 +131,6 @@ export const testimonial = [
     client: "Aashi Designz",
     review: "working with aman changed how we look at digital products.",
   },
-{
-  
-}
 
   // {
   //   client: "Stegas",
