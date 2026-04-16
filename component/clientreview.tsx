@@ -58,7 +58,7 @@ export default function ClientReview() {
           onSlideChange={(swiper) => setActiveSlide(swiper.activeIndex)}
           onSwiper={(swiper) => setActiveSlide(swiper.activeIndex)}
         >
-          {testimonial.map((review, index) => {
+          {[...testimonial, ...testimonial].map((review, index) => {
             return (
               <SwiperSlide
                 key={index}
