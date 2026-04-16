@@ -61,7 +61,7 @@ export default function Contact() {
               <br />
               <input
                 type="text"
-                placeholder="Rahul Raj"
+                placeholder="Your name"
                 className="w-full py-2 border-b-2 text-sm"
                 name="name"
                 required
@@ -74,7 +74,7 @@ export default function Contact() {
               <br />
               <input
                 type="email"
-                placeholder="email01@domail.com"
+                placeholder="hello@domain.com"
                 className="w-full py-2 border-b-2  text-sm"
                 name="email"
                 required
@@ -88,7 +88,7 @@ export default function Contact() {
             <br />
             <input
               name="phone"
-              placeholder="+919402947599"
+              placeholder="+91xxxxxxx456"
               type="text"
               maxLength={15}
               inputMode="numeric"

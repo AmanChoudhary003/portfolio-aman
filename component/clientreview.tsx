@@ -5,11 +5,12 @@ import Link from "next/link";
 import "swiper/css";
 import { MoveRight, Quote } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import { testimonial } from "@/constant/constant";
 import { Autoplay } from "swiper/modules";
 
+
 export default function ClientReview() {
+
   const [activeSlide, setActiveSlide] = useState<number>(1);
 
   return (
