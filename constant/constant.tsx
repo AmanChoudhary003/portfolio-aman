@@ -131,18 +131,22 @@ export const testimonial = [
     client: "Aashi Designz",
     review: "working with aman changed how we look at digital products.",
   },
-  {
-    client: "Stegas",
-    review: "aman brought our vision to life even better than we expected.",
-  },
-  {
-    client: "Dems",
-    review:
-      "what impressed us most was his attention to detail and technical clarity.",
-  },
-  {
-    client: "Avvari Reality",
-    review:
-      " the website feels fast, modern, and extremely well built. you can clearly see the thought and expertise behind every part.",
-  },
+{
+  
+}
+
+  // {
+  //   client: "Stegas",
+  //   review: "aman brought our vision to life even better than we expected.",
+  // },
+  // {
+  //   client: "Dems",
+  //   review:
+  //     "what impressed us most was his attention to detail and technical clarity.",
+  // },
+  // {
+  //   client: "Avvari Reality",
+  //   review:
+  //     " the website feels fast, modern, and extremely well built. you can clearly see the thought and expertise behind every part.",
+  // },
 ];

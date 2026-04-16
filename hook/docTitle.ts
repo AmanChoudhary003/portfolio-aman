@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { format } from "path";
 
 export default function DocumentTitle() {
   const docTitle = usePathname();
@@ -13,11 +14,20 @@ export default function DocumentTitle() {
       .split("|")
       .pop() || "Aman Choudhary"; // Get the last part of the path or "Home"
 
+  const formattedData = `Portfolio | ${cleanTitle.slice(0, 1).toUpperCase() + cleanTitle.slice(1)}`;
   useEffect(() => {
-    document.title = `Portfolio | ${cleanTitle.slice(0,1 ).toUpperCase()+ cleanTitle.slice(1)}`;
+    document.title = formattedData;
+
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", "page_view", {
+        page_title: formattedData,
+        page_location: window.location.href,
+        page_path: docTitle,
+      });
+    }
 
     return () => {};
-  }, [docTitle]);
+  }, [docTitle, formattedData]);
 
   return null;
 }

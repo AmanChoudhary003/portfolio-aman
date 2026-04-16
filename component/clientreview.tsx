@@ -2,13 +2,12 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import "swiper/css";
 import { MoveRight, Quote } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+
 import { testimonial } from "@/constant/constant";
 import { Autoplay } from "swiper/modules";
-import WindowWidth from "@/hook/windowResize";
 
 export default function ClientReview() {
   const [activeSlide, setActiveSlide] = useState<number>(1);

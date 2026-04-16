@@ -4,7 +4,7 @@ import Navbar from "../component/navbar";
 import Footer from "@/component/footer";
 import Whatsapp from "@/component/whatsappButton";
 import DocumentTitle from "@/hook/docTitle";
-import CookieBanner from "@/component/cookiebanner";
+import ConsentBanner from "@/component/consentBanner";
 import Analytics from "@/component/analytics";
 
 import { Big_Shoulders, Geist } from "next/font/google";
@@ -55,7 +55,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <DocumentTitle />
-        <CookieBanner />
+        <ConsentBanner />
         <Analytics />
         <Navbar />
         {children}
