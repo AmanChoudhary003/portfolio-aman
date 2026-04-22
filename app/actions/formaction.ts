@@ -1,18 +1,16 @@
 "use server";
 
-import { schemaZod } from "./zod";
-import { Mail } from "@/lib/nodemailer";
-import { RateLimiter } from "./rateLimiter";
+import { schemaZod } from "@/lib/zod";
+import { Mail } from "./mail";
+import { RateLimiter } from "@/lib/rateLimiter";
 import { headers } from "next/headers";
 
-export async function FormAction(prevState: any, formData: FormData) {
+export async function FormAction(formData: FormData) {
   const headerList = await headers();
 
   const forwarded = headerList.get("x-forwarded-for");
 
-  const ip = forwarded
-    ? forwarded.split(",")[0].trim()
-    : "anonymous";
+  const ip = forwarded ? forwarded.split(",")[0].trim() : "anonymous";
 
   const email = formData.get("email")?.toString() || "";
 

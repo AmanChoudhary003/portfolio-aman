@@ -6,7 +6,7 @@ import { FormAction } from "@/lib/mail";
 import Link from "next/link";
 import Image from "next/image";
 import { socials } from "@/constant/constant";
-import { gsap, useGSAP } from "@/lib/gsapConfig";
+import { gsap, useGSAP } from "@/gsapConfig";
 import isMobile from "@/hook/windowResize";
 
 export default function Contact() {

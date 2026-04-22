@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRef } from "react";
-import { gsap, useGSAP } from "@/lib/gsapConfig";
+import { gsap, useGSAP } from "@/gsapConfig";
 
 export default function NotFound() {
   const container = useRef<HTMLDivElement>(null);

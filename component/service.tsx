@@ -2,7 +2,7 @@
 import { useRef, useEffect } from "react";
 
 import { homeServiceSection } from "@/constant/constant";
-import { gsap, useGSAP, SplitText } from "@/lib/gsapConfig";
+import { gsap, useGSAP, SplitText } from "@/gsapConfig";
 export default function Service() {
   const serviceRef = useRef<HTMLDivElement | null>(null);
 

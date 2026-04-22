@@ -2,6 +2,7 @@
 
 import { Cookie } from "lucide-react";
 import { useState, useEffect } from "react";
+import { SaveConsent } from "@/app/actions/consent";
 
 export default function ConsentBanner() {
   const [showBanner, setShowBanner] = useState<boolean>(false);
@@ -16,17 +17,28 @@ export default function ConsentBanner() {
   const handleConsent = async (status: "granted" | "denied") => {
     const randId = crypto.randomUUID();
 
-    document.cookie = `portfolio_consent=${status};max-age=${60 * 60 * 24 * 365}; path=/; SameSite=Lax;Secure`;
+    const consentData = {
+      consentId: randId,
+      status: status,
+      userAgent: navigator.userAgent,
+    };
 
-    if (window.gtag) {
-      window.gtag("consent", "update", {
-        analytics_storage: status,
-        ad_storage: status,
-      });
+    const result = await SaveConsent({ consent: consentData });
+
+    if (result.success) {
+      document.cookie = `portfolio_consent=${status};max-age=${60 * 60 * 24 * 365};path=/;Secure`;
+      if (window.gtag) {
+        window.gtag("consent", "update", {
+          analytics_storage: status,
+          ad_storage: status,
+        });
+      }
+      setShowBanner(false);
+    } else {
+      console.error("failed to save audit log");
     }
-
-    setShowBanner(false);
   };
+
   if (!showBanner) return null;
   return (
     <div className="w-90 sm:w-100 h-fit p-5 bg-black/70 backdrop-blur-2xl fixed  left-[50%] -translate-x-[50%] sm:translate-x-0 sm:left-6 bottom-6 rounded-xl  z-9999 ">

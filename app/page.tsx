@@ -12,7 +12,7 @@ import Tool from "@/component/tool";
 import Link from "next/link";
 import { MoveRight } from "lucide-react";
 
-import { gsap, useGSAP, SplitText } from "@/lib/gsapConfig";
+import { gsap, useGSAP, SplitText } from "@/gsapConfig";
 
 export default function Home() {
   useGSAP(() => {

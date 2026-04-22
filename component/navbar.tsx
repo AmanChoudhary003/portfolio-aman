@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 import { useState, useEffect, useRef } from "react";
-import { gsap, useGSAP } from "@/lib/gsapConfig";
+import { gsap, useGSAP } from "@/gsapConfig";
 import { pageLink } from "@/constant/constant";
 
 export default function Navbar() {

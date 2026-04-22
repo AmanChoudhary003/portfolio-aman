@@ -1,17 +1,19 @@
 import { PrismaClient } from "@prisma/client";
+import { PrismaPg } from "@prisma/adapter-pg";
+import pg from "pg";
 import * as dotenv from "dotenv";
+
 dotenv.config();
 
-
 const prismaSingleton = () => {
-  const url = !process.env.DATABASE_URL;
-  if (!url) {
+  const connectionString = process.env.DATABASE_URL;
+  if (!connectionString) {
     throw new Error("No database connection url");
   }
 
-  return new PrismaClient({
-    datasourceUrl: url,
-  } as any);
+  const pool = new pg.Pool({ connectionString });
+  const adapter = new PrismaPg(pool);
+  return new PrismaClient({ adapter });
 };
 
 declare const globalThis: {

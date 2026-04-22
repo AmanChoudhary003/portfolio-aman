@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { gsap, useGSAP } from "@/lib/gsapConfig";
+import { gsap, useGSAP } from "@/gsapConfig";
 
 import isMobile from "@/hook/windowResize";
 

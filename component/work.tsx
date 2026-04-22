@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { workSectionData } from "@/constant/constant";
 import { useRef } from "react";
-import { gsap, useGSAP, SplitText } from "@/lib/gsapConfig";
+import { gsap, useGSAP, SplitText } from "@/gsapConfig";
 export default function ProjectSection() {
   const projectRef = useRef<HTMLDivElement>(null);
 

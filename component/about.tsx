@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useRef } from "react";
 import { ArrowDownToLine } from "lucide-react";
-import { gsap, useGSAP, SplitText } from "@/lib/gsapConfig";
+import { gsap, useGSAP, SplitText } from "@/gsapConfig";
 export default function About() {
   const aboutRef = useRef<HTMLDivElement>(null);
 
