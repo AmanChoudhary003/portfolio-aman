@@ -1,3 +1,5 @@
+"use server"
+
 import { Transport } from "@/lib/nodemailer";
 
 type User = {
