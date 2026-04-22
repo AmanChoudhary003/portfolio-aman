@@ -40,7 +40,7 @@ export default function Analytics() {
         {`window.dataLayer = window.dataLayer || []; 
         function gtag() {window.dataLayer.push(arguments)}
         gtag('js', new Date()); gtag('config', '${gaID}', {
-        send_page_view:false})`}
+        send_page_view:false, storage: 'none'})`}
       </Script>
     </>
   );

@@ -22,7 +22,13 @@ export default function ConsentBanner() {
       status: status,
       userAgent: navigator.userAgent,
     };
-
+    if (status === "granted") {
+      window.gtag("event", "page_view", {
+        page_location: window.location.href,
+        page_path: window.location.pathname,
+        page_title: document.title,
+      });
+    }
     const result = await SaveConsent({ consent: consentData });
 
     if (result.success) {
