@@ -1,0 +1,18 @@
+
+
+generator client {
+  provider = "prisma-client-js"
+  // output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  consentId String   @unique
+  status    String
+  createdAt DateTime @default(now())
+  userAgent String
+}
