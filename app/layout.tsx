@@ -4,7 +4,7 @@ import Navbar from "../component/navbar";
 import Footer from "@/component/footer";
 import Whatsapp from "@/component/whatsappButton";
 import DocumentTitle from "@/hook/docTitle";
-import ConsentBanner from "@/component/consentBanner";
+import ConsentBanner from "@/component/consent";
 import Analytics from "@/component/analytics";
 
 import { Big_Shoulders, Geist } from "next/font/google";

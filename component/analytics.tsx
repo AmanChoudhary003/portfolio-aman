@@ -1,6 +1,8 @@
 import Script from "next/script";
 
 export default function Analytics() {
+  if (process.env.NODE_ENV !== "production") return null;
+
   const gaID = process.env.G_ID;
   if (!gaID) return null;
 

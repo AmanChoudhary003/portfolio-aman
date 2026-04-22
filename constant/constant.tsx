@@ -107,12 +107,12 @@ export const workSectionData = [
     desc: "Web App",
     link: "",
   },
-  {
-    name: "Mojito",
-    date: "2026",
-    desc: "Web design",
-    link: "https://mojito-azure.vercel.app",
-  },
+  // {
+  //   name: "Mojito",
+  //   date: "2026",
+  //   desc: "Web design",
+  //   link: "https://mojito-azure.vercel.app",
+  // },
   {
     name: "Portfolio",
     date: "2026",

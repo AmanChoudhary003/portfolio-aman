@@ -2,7 +2,6 @@
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { format } from "path";
 
 export default function DocumentTitle() {
   const docTitle = usePathname();
