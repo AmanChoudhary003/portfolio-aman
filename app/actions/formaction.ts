@@ -5,7 +5,7 @@ import { Mail } from "./mail";
 import { RateLimiter } from "@/lib/rateLimiter";
 import { headers } from "next/headers";
 
-export async function FormAction(formData: FormData) {
+export async function FormAction(prevState:any, formData: FormData) {
   const headerList = await headers();
 
   const forwarded = headerList.get("x-forwarded-for");
