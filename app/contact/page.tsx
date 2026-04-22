@@ -2,7 +2,7 @@
 
 import { Mail, Phone, SendHorizontal } from "lucide-react";
 import { useRef, useActionState } from "react";
-import { FormAction } from "../actions/formaction";
+import { FormAction } from "@/app/actions/formaction";
 import Link from "next/link";
 import Image from "next/image";
 import { socials } from "@/constant/constant";
